@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
+import 'chartview.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -186,7 +187,13 @@ class _DashBoardState extends State<DashBoard> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ChartView()),
+                                    );
+                                  },
                                   icon: const ImageIcon(
                                     AssetImage(
                                       "assets/images/Sales.png",
@@ -216,7 +223,13 @@ class _DashBoardState extends State<DashBoard> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ChartView()),
+                                    );
+                                  },
                                   icon: const ImageIcon(
                                     AssetImage(
                                       "assets/images/Receiving.png",
@@ -225,7 +238,7 @@ class _DashBoardState extends State<DashBoard> {
                                     size: 50,
                                   )),
                               const Text(
-                                "Sales",
+                                "Receving",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: "Inter",
@@ -263,7 +276,7 @@ class _DashBoardState extends State<DashBoard> {
                                     size: 50,
                                   )),
                               const Text(
-                                "Sales",
+                                "Expenses",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: "Inter",
@@ -287,13 +300,13 @@ class _DashBoardState extends State<DashBoard> {
                                   onPressed: () {},
                                   icon: const ImageIcon(
                                     AssetImage(
-                                      "assets/images/Sales.png",
+                                      "assets/images/Report.png",
                                     ),
                                     color: Colors.white,
                                     size: 50,
                                   )),
                               const Text(
-                                "Sales",
+                                "Reports",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: "Inter",

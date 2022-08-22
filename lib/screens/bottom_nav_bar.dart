@@ -3,6 +3,8 @@ import 'package:socialauth/constants/colors.dart';
 
 import 'chartview.dart';
 import 'dashboard.dart';
+import 'salesOrder.dart';
+import 'tabbar.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -16,8 +18,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final pages = [
     const DashBoard(),
-    ChartView(),
-    const Page3(),
+    const SalesOrder(),
+    profilePage(),
     const Page4(),
     const Page5(),
   ];
