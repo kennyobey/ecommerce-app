@@ -1,60 +1,123 @@
 import 'package:flutter/material.dart';
+import 'package:socialauth/constants/colors.dart';
+import 'package:socialauth/constants/text_style.dart';
 
 class ProductName extends StatelessWidget {
-  final String? title, subTitle, image;
+  final String? productName,
+      categoryName,
+      stock,
+      image,
+      price,
+      discount,
+      xValue;
   final Color? color, iconcolor, textColor;
 
   const ProductName(
       {Key? key,
-      this.title,
+      this.productName,
       this.image,
       this.color,
       this.iconcolor,
-      this.subTitle,
-      this.textColor})
+      this.categoryName,
+      this.stock,
+      this.textColor,
+      this.price,
+      this.discount,
+      this.xValue})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: MediaQuery.of(context).size.width,
-        height: 100,
-        // decoration: BoxDecoration(
-        //   border: Border.all(
-        //     color: Colors.grey,
-        //     style: BorderStyle.solid,
-        //     width: 1.0,
-        //   ),
-        //   color: Colors.transparent,
-        //   borderRadius: BorderRadius.circular(8.0),
-        // ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  // crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      image ?? "",
-                      width: 30,
-                      height: 50,
-                    )
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  //crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [Text("hello"), Text("hello tue"), Text("tue Tue")],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  //crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [Text("hello"), Text("hello tue"), Text("tue Tue")],
-                )
-              ]),
-        ));
+    return InkWell(
+      onTap: () {},
+      child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: 70,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 0),
+            child: Row(
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        image ?? "",
+                        width: 60,
+                        height: 60,
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        productName ?? "",
+                        style: AppTextStyle.style14black500,
+                      ),
+                      Text(
+                        categoryName ?? "",
+                        style: AppTextStyle.style12accent500,
+                      ),
+                      Text(
+                        stock ?? "",
+                        style: AppTextStyle.style12accent500,
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        price ?? "",
+                        style: AppTextStyle.style14black500,
+                      ),
+                      Row(
+                        //mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // IconButton(
+                          //   onPressed: () {},
+                          //   icon: const Icon(
+                          //     Icons.delete_forever_outlined,
+                          //     size: 10,
+                          //   ),
+                          //   color: AppColors.accentColor,
+                          // ),
+                          Text(
+                            xValue ?? "",
+                            style: AppTextStyle.style12accent500,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          // IconButton(
+                          //   onPressed: () {},
+                          //   icon: const Icon(
+                          //     Icons.add_circle_outline_outlined,
+                          //     size: 10,
+                          //   ),
+                          //   color: AppColors.accentColor,
+                          // ),
+                          Text(
+                            discount ?? "",
+                            style: AppTextStyle.style12accent500,
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ]),
+          )),
+    );
   }
 }

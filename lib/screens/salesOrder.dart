@@ -61,34 +61,40 @@ class _SalesOrderState extends State<SalesOrder>
                 unselectedLabelColor: Colors.black,
                 labelColor: Colors.red,
                 tabs: const [
-                  Text(
-                    " Sales Order",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: "Inter",
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                  Expanded(
+                    child: Text(
+                      " Sales Order",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "Inter",
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                      ),
                     ),
                   ),
-                  Text(
-                    "Today Sales",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: "Inter",
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                  Expanded(
+                    child: Text(
+                      "Today Sales",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "Inter",
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                      ),
                     ),
                   ),
-                  Text(
-                    "Suspended Sales",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: "Inter",
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                  Expanded(
+                    child: Text(
+                      "Suspended Sales",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "Inter",
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                      ),
                     ),
                   )
                 ],
@@ -104,9 +110,10 @@ class _SalesOrderState extends State<SalesOrder>
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Container(
-                    padding: EdgeInsets.all(8),
-                    height: 530,
-                    width: 332,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    // height: 490,
+                    // width: 200,
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(16)),
                       color: Colors.white,
@@ -174,9 +181,69 @@ class _SalesOrderState extends State<SalesOrder>
                                   )
                                 ],
                               ),
+                              const Divider(
+                                thickness: 2.5,
+                              ),
                               const ProductName(
-                                image: "assets/images/SalesIcon.png",
-                              )
+                                image: "assets/images/ProductImage.png",
+                                productName: "Product name",
+                                categoryName: "Categoy name",
+                                stock: "12 in stock",
+                                price: "Tsh 150,000",
+                                xValue: "x2",
+                                discount: "Discount",
+                              ),
+                              const Divider(
+                                thickness: 1,
+                              ),
+                              const ProductName(
+                                image: "assets/images/ProductImage.png",
+                                productName: "Product name",
+                                categoryName: "Categoy name",
+                                stock: "12 in stock",
+                                price: "Tsh 150,000",
+                                xValue: "x2",
+                                discount: "Discount",
+                              ),
+                              const Divider(
+                                thickness: 1,
+                              ),
+                              const ProductName(
+                                image: "assets/images/ProductImage.png",
+                                productName: "Product name",
+                                categoryName: "Categoy name",
+                                stock: "12 in stock",
+                                price: "Tsh 150,000",
+                                xValue: "x2",
+                                discount: "Discount",
+                              ),
+                              const Divider(
+                                thickness: 1,
+                              ),
+                              const ProductName(
+                                image: "assets/images/ProductImage.png",
+                                productName: "Product name",
+                                categoryName: "Categoy name",
+                                stock: "12 in stock",
+                                price: "Tsh 150,000",
+                                xValue: "x2",
+                                discount: "Discount",
+                              ),
+                              const Divider(
+                                thickness: 1,
+                              ),
+                              const ProductName(
+                                image: "assets/images/ProductImage.png",
+                                productName: "Product name",
+                                categoryName: "Categoy name",
+                                stock: "12 in stock",
+                                price: "Tsh 150,000",
+                                xValue: "x2",
+                                discount: "Discount",
+                              ),
+                              const Divider(
+                                thickness: 1,
+                              ),
                             ],
                           ),
                           Text('Person'),
