@@ -42,6 +42,7 @@ class ProductName extends StatelessWidget {
                 //crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
+                    mainAxisSize: MainAxisSize.min,
                     // crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -49,14 +50,14 @@ class ProductName extends StatelessWidget {
                         image ?? "",
                         width: 60,
                         height: 60,
-                      )
+                      ),
                     ],
                   ),
                   const SizedBox(
                     width: 20,
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -75,7 +76,7 @@ class ProductName extends StatelessWidget {
                   ),
                   Spacer(),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
@@ -83,17 +84,17 @@ class ProductName extends StatelessWidget {
                         style: AppTextStyle.style14black500,
                       ),
                       Row(
-                        //mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // IconButton(
-                          //   onPressed: () {},
-                          //   icon: const Icon(
-                          //     Icons.delete_forever_outlined,
-                          //     size: 10,
-                          //   ),
-                          //   color: AppColors.accentColor,
-                          // ),
+                          IconButton(
+                            onPressed: () {},
+                            padding: EdgeInsets.zero,
+                            constraints: BoxConstraints(),
+                            icon: const Icon(
+                              Icons.delete_forever_outlined,
+                              size: 10,
+                            ),
+                            color: AppColors.accentColor,
+                          ),
                           Text(
                             xValue ?? "",
                             style: AppTextStyle.style12accent500,
@@ -102,14 +103,16 @@ class ProductName extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          // IconButton(
-                          //   onPressed: () {},
-                          //   icon: const Icon(
-                          //     Icons.add_circle_outline_outlined,
-                          //     size: 10,
-                          //   ),
-                          //   color: AppColors.accentColor,
-                          // ),
+                          IconButton(
+                            onPressed: () {},
+                            padding: EdgeInsets.zero,
+                            constraints: BoxConstraints(),
+                            icon: const Icon(
+                              Icons.add_circle_outline_outlined,
+                              size: 10,
+                            ),
+                            color: AppColors.accentColor,
+                          ),
                           Text(
                             discount ?? "",
                             style: AppTextStyle.style12accent500,

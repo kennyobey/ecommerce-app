@@ -7,14 +7,14 @@ import '../constants/text_style.dart';
 import '../widgets/dropdown_button.dart';
 import 'checkout_order.dart';
 
-class SalesOrder extends StatefulWidget {
-  const SalesOrder({Key? key}) : super(key: key);
+class PaymentProcess extends StatefulWidget {
+  const PaymentProcess({Key? key}) : super(key: key);
 
   @override
-  State<SalesOrder> createState() => _SalesOrderState();
+  State<PaymentProcess> createState() => _PaymentProcessState();
 }
 
-class _SalesOrderState extends State<SalesOrder>
+class _PaymentProcessState extends State<PaymentProcess>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController = TabController(
     length: 3,
@@ -62,7 +62,7 @@ class _SalesOrderState extends State<SalesOrder>
                   height: 10,
                 ),
                 Text(
-                  "Checkout Sales Order",
+                  "Payment Process",
                   style: AppTextStyle.style16white500,
                 )
               ]),
@@ -189,77 +189,6 @@ class _SalesOrderState extends State<SalesOrder>
                                   ),
                                 )
                               ],
-                            ),
-                            const Divider(
-                              thickness: 2.5,
-                            ),
-                            ProductName(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const CheckOutOrder()),
-                                );
-                              },
-                              image: "assets/images/ProductImage.png",
-                              productName: "Product name",
-                              categoryName: "Categoy name",
-                              stock: "12 in stock",
-                              price: "Tsh 150,000",
-                              xValue: "x2",
-                              discount: "Discount",
-                            ),
-                            const Divider(
-                              thickness: 1,
-                            ),
-                            const ProductName(
-                              image: "assets/images/ProductImage.png",
-                              productName: "Product name",
-                              categoryName: "Categoy name",
-                              stock: "12 in stock",
-                              price: "Tsh 150,000",
-                              xValue: "x2",
-                              discount: "Discount",
-                            ),
-                            const Divider(
-                              thickness: 1,
-                            ),
-                            const ProductName(
-                              image: "assets/images/ProductImage.png",
-                              productName: "Product name",
-                              categoryName: "Categoy name",
-                              stock: "12 in stock",
-                              price: "Tsh 150,000",
-                              xValue: "x2",
-                              discount: "Discount",
-                            ),
-                            const Divider(
-                              thickness: 1,
-                            ),
-                            const ProductName(
-                              image: "assets/images/ProductImage.png",
-                              productName: "Product name",
-                              categoryName: "Categoy name",
-                              stock: "12 in stock",
-                              price: "Tsh 150,000",
-                              xValue: "x2",
-                              discount: "Discount",
-                            ),
-                            const Divider(
-                              thickness: 1,
-                            ),
-                            const ProductName(
-                              image: "assets/images/ProductImage.png",
-                              productName: "Product name",
-                              categoryName: "Categoy name",
-                              stock: "12 in stock",
-                              price: "Tsh 150,000",
-                              xValue: "x2",
-                              discount: "Discount",
-                            ),
-                            const Divider(
-                              thickness: 1,
                             ),
                           ],
                         ),

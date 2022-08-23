@@ -10,12 +10,33 @@ class AppTextStyle {
     primaryColor: AppColors.primaryColor,
   );
 
-  static const style14boldblack = TextStyle(
-    color: Color(0xFF14171A),
+  static const style18boldprimary500 = TextStyle(
+    color: AppColors.primaryColor,
     fontFamily: "Inter",
     fontStyle: FontStyle.normal,
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static const style18boldblack500 = TextStyle(
+    color: Colors.black,
+    fontFamily: "Inter",
+    fontStyle: FontStyle.normal,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static const style18boldwhite500 = TextStyle(
+    color: Colors.white,
+    fontFamily: "Inter",
+    fontStyle: FontStyle.normal,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static const style16white500 = TextStyle(
+    color: Colors.white,
+    fontFamily: "Inter",
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
   );
 
   static const style14black500 = TextStyle(

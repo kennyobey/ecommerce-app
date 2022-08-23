@@ -3,6 +3,7 @@ import 'package:socialauth/constants/colors.dart';
 
 import 'chartview.dart';
 import 'dashboard.dart';
+import 'payment_process.dart';
 import 'salesOrder.dart';
 import 'tabbar.dart';
 
@@ -19,7 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final pages = [
     const DashBoard(),
     const SalesOrder(),
-    profilePage(),
+    const PaymentProcess(),
     const Page4(),
     const Page5(),
   ];
