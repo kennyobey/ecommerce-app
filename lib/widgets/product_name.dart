@@ -11,6 +11,7 @@ class ProductName extends StatelessWidget {
       discount,
       xValue;
   final Color? color, iconcolor, textColor;
+  final void Function()? onTap;
 
   const ProductName(
       {Key? key,
@@ -23,13 +24,14 @@ class ProductName extends StatelessWidget {
       this.textColor,
       this.price,
       this.discount,
-      this.xValue})
+      this.xValue,
+      this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
           width: MediaQuery.of(context).size.width,
           height: 70,

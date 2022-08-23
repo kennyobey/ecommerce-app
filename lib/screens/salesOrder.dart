@@ -4,6 +4,7 @@ import 'package:socialauth/widgets/product_name.dart';
 
 import '../constants/colors.dart';
 import '../widgets/dropdown_button.dart';
+import 'checkout_order.dart';
 
 class SalesOrder extends StatefulWidget {
   const SalesOrder({Key? key}) : super(key: key);
@@ -184,7 +185,15 @@ class _SalesOrderState extends State<SalesOrder>
                               const Divider(
                                 thickness: 2.5,
                               ),
-                              const ProductName(
+                              ProductName(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const CheckOutOrder()),
+                                  );
+                                },
                                 image: "assets/images/ProductImage.png",
                                 productName: "Product name",
                                 categoryName: "Categoy name",
